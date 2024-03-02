@@ -1,0 +1,9 @@
+// custom.scss
+
+// Override default variables
+$primary: #06AED5; // New primary color
+$secondary: #6c757d; // New secondary color
+// You can override more variables here
+
+// Import Bootstrap's source SCSS
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
