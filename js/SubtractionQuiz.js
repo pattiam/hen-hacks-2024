@@ -75,3 +75,26 @@ function generateQuiz() {
 }
 
 generateQuiz();
+
+// Function to update font size and weight
+function updateFontStyles(fontSize, fontWeight) {
+  document.body.style.fontSize = fontSize + 'px';
+  document.body.style.fontWeight = fontWeight;
+}
+
+// Event listener for font size slider
+const fontSizeSlider = document.getElementById('fontSizeSlider');
+fontSizeSlider.addEventListener('input', function() {
+  const fontSize = this.value;
+  updateFontStyles(fontSize, null);
+});
+
+// Event listener for font weight slider
+const fontWeightSlider = document.getElementById('fontWeightSlider');
+fontWeightSlider.addEventListener('input', function() {
+  const fontWeight = this.value;
+  updateFontStyles(null, fontWeight);
+});
+
+// Default font size and weight
+updateFontStyles(16, 400);
