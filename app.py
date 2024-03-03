@@ -13,12 +13,10 @@ def hello():
 def send_message():
     data = request.get_json()
     user_message = data['message']
-    client = OpenAI(
-        api_key="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"
-        )
+    client = OpenAI()
     chat_completion = client.chat.completions.create(
         model="gpt-3.5-turbo",
-        messages=[{"role": "user", "content": user_message}]
+        messages=[{"role": "user", "content": user_message + "don't give an answer. Just explain how to do it."}]
     )
     response = chat_completion.choices[0].message.content
     return response

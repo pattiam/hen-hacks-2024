@@ -1,14 +1,17 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name ="viewport" content="width-device-width, 
+  <meta name="viewport" content="width-device-width, 
     initial-scale=1.0, viewport-fit=cover">
-    <title>Henlighten - Home</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <title>Henlighten - Home</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
 </head>
+
 <body>
   <!--NAV BAR -->
   <header>
@@ -37,45 +40,47 @@
         </div>
       </div>
     </nav>
-  </header> 
+  </header>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
   <!-- SLIDES FOR PROGRESS/UNITS/GAMES/CHANLLENGES-->
   <section>
     <div class="containter text-center">
-      <h1 class ="title mb-5">hi! :D</h1>
+      <h1 class="title mb-5">hi! :D</h1>
       <h1 class="title">Welcome back,</h1>
       <h1 id="demo">test</h1>
     </div>
   </section>
   <section id="flight-list" class="flight-list">
-  <div class="container">
-    <div class="flight-box">
-      <h2>Progress</h2>
-      <p>Look at your progress here! You've earned this many points</p>
-      <a href="#progress" class="btn">Go Now</a>
+    <div class="container">
+      <div class="flight-box">
+        <h2>Progress</h2>
+        <p>Look at your progress here! You've earned this many points</p>
+        <a href="#progress" class="btn">Go Now</a>
+      </div>
+      <div class="flight-box">
+        <h2>Units</h2>
+        <p>Continue your current unit!</p>
+        <a href="#unit-list" class="btn">Go Now</a>
+      </div>
+      <div class="flight-box">
+        <h2>Games</h2>
+        <p>Play some games to earn points to get to the next unit!</p>
+        <a href="#game-list" class="btn">Go Now</a>
+      </div>
+      <div class="flight-box">
+        <h2>Competition</h2>
+        <p>Join your peers in some headed competition to get more points!</p>
+        <a href="" class="btn">Go Now</a>
+      </div>
     </div>
-    <div class="flight-box">
-      <h2>Units</h2>
-      <p>Continue your current unit!</p>
-      <a href="#unit-list" class="btn">Go Now</a>
-    </div>
-    <div class="flight-box">
-      <h2>Games</h2>
-      <p>Play some games to earn points to get to the next unit!</p>
-      <a href="#game-list" class="btn">Go Now</a>
-    </div>
-    <div class="flight-box">
-      <h2>Competition</h2>
-      <p>Join your peers in some headed competition to get more points!</p>
-      <a href="" class="btn">Go Now</a>
-    </div>
-  </div>
   </section>
-  <section id = "progress">
+  <section id="progress">
     <div class="containter progressSpace">
-      <h1 class ="title">Progress</h1>
+      <h1 class="title">Progress</h1>
       <h2 class="title">You have completed x amount of your unit</h2>
       <div id="myProgress">
         <div id="myBar"></div>
@@ -88,9 +93,9 @@
         <h2>Completed</h2>
         <select id="beforeDropdown">
           <option value="">-- Before --</option>
-      </select>
-      <a href="" class="btn">Go Now</a>
-    </div>
+        </select>
+        <a href="" class="btn">Go Now</a>
+      </div>
       <div class="unit-box">
         <h2>Current</h2>
         <select id="currentDropdown">
@@ -102,133 +107,134 @@
         <h2>Future Units</h2>
         <select id="afterDropdown">
           <option value="">-- After --</option>
-      </select>
+        </select>
       </div>
     </div>
-    </section>
-    <section id="game-list" class="game-list">
-      <div class="container">
-        <h1 class ="title">Games</h1>
-        <p class="title">Earn points towards your unit</p>
-        <div class="game-box">
-          <h2>Game 1</h2>
-        </div>
-        <div class="game-box">
-          <h2>Game 2</h2>
-        </div>
-        <div class="game-box">
-          <h2>Game 3</h2>
-        </div>
+  </section>
+  <section id="game-list" class="game-list">
+    <div class="container">
+      <h1 class="title">Games</h1>
+      <p class="title">Earn points towards your unit</p>
+      <div class="game-box">
+        <h2>Game 1</h2>
       </div>
-      </section>
-
-    <script type="module" src="js/modules.js"></script>
-
-<div class="form-popup" id="myForm">
-  <form action="/action_page.php" class="form-container">
-    <h1>Accessibility Aids</h1>
-
-    <input type="checkbox" id="uppercaseCheckbox">
-    <label for="uppercaseCheckbox">Set everything to uppercase</label>
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-
-    <button type="button" onclick="closeForm()">Go Back</button>
-  </form>
-</div>
-
-<!-- Chatbot Interface -->
-<div class="chat-popup" id="chatPopup">
-  <div class="chat-container">
-    <button class="close-btn" onclick="closeChat()">Close</button>
-    <div class="chat-messages" id="chatMessages">
-      <!-- Chat messages will be displayed here -->
+      <div class="game-box">
+        <h2>Game 2</h2>
+      </div>
+      <div class="game-box">
+        <h2>Game 3</h2>
+      </div>
     </div>
-    <input type="text" id="chatInput" placeholder="Type your message...">
-    <button onclick="sendMessage()">Send</button>
+  </section>
+
+  <script type="module" src="js/modules.js"></script>
+
+  <div class="form-popup" id="myForm">
+    <form action="/action_page.php" class="form-container">
+      <h1>Accessibility Aids</h1>
+
+      <input type="checkbox" id="uppercaseCheckbox">
+      <label for="uppercaseCheckbox">Set everything to uppercase</label>
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <button type="button" onclick="closeForm()">Go Back</button>
+    </form>
   </div>
-</div>
 
-
-<footer class="bg-dark text-light py-4">
-  <div class="container text-center">
-    <p>&copy; 2024 Henlighten. All rights reserved.</p>
+  <!-- Chatbot Interface -->
+  <div class="chat-popup" id="chatPopup">
+    <div class="chat-container">
+      <button class="close-btn" onclick="closeChat()">Close</button>
+      <div class="chat-messages" id="chatMessages">
+        <!-- Chat messages will be displayed here -->
+      </div>
+      <input type="text" id="chatInput" placeholder="Type your message...">
+      <button onclick="sendMessage()">Send</button>
+    </div>
   </div>
-</footer>
 
-<script>
-  function openChat() {
-    document.getElementById("chatPopup").style.display = "block";
-  }
 
-  function closeChat() {
-    document.getElementById("chatPopup").style.display = "none";
-  }
+  <footer class="bg-dark text-light py-4">
+    <div class="container text-center">
+      <p>&copy; 2024 Henlighten. All rights reserved.</p>
+    </div>
+  </footer>
 
-  function sendMessage() {
-  var messageInput = document.getElementById("chatInput");
-  var message = messageInput.value.trim();
-  if (message !== "") {
-    var chatMessages = document.getElementById("chatMessages");
-    var messageElement = document.createElement("div");
-    messageElement.textContent = "You: " + message;
-    chatMessages.appendChild(messageElement);
-    messageInput.value = "";
-    
-    // Send message to Flask endpoint along with user's message
-    fetch('http://127.0.0.1:5000/send_message', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ message: message }),
-    })
-      .then(response => response.text())
-      .then(data => {
-        // Display response from server (chatbot.py) in chat interface
-        var botMessageElement = document.createElement("div");
-        botMessageElement.textContent = "EggspertAI: " + data;
-        chatMessages.appendChild(botMessageElement);
-      })
-      .catch(error => console.error('Error:', error));
-  }
-}
-
-</script>
-
-<script>
-function openForm() {
-  document.getElementById("myForm").style.display = "block";
-}
-
-function closeForm() {
-  document.getElementById("myForm").style.display = "none";
-}
-document.addEventListener("DOMContentLoaded", function() {
-  const uppercaseCheckbox = document.getElementById('uppercaseCheckbox');
-
-  // Function to recursively transform text nodes to uppercase
-  function transformTextToUppercase(node) {
-    if (node.nodeType === Node.TEXT_NODE) {
-      node.textContent = node.textContent.toUpperCase();
-    } else {
-      node.childNodes.forEach(childNode => transformTextToUppercase(childNode));
+  <script>
+    function openChat() {
+      document.getElementById("chatPopup").style.display = "block";
     }
-  }
 
-  // Function to handle checkbox change
-  function handleCheckboxChange() {
-    if (uppercaseCheckbox.checked) {
-      transformTextToUppercase(document.body);
-    } else {
-      location.reload(); // Refresh the page to revert changes
+    function closeChat() {
+      document.getElementById("chatPopup").style.display = "none";
     }
-  }
 
-  // Add event listener to the checkbox
-  uppercaseCheckbox.addEventListener('change', handleCheckboxChange);
-});
-</script>
-<script type="module" src="js/logoutBackend.js"></script>
+    function sendMessage() {
+      var messageInput = document.getElementById("chatInput");
+      var message = messageInput.value.trim();
+      if (message !== "") {
+        var chatMessages = document.getElementById("chatMessages");
+        var messageElement = document.createElement("div");
+        messageElement.textContent = "You: " + message;
+        chatMessages.appendChild(messageElement);
+        messageInput.value = "";
+
+        // Send message to Flask endpoint along with user's message
+        fetch('http://127.0.0.1:5000/send_message', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ message: message }),
+        })
+          .then(response => response.text())
+          .then(data => {
+            // Display response from server (chatbot.py) in chat interface
+            var botMessageElement = document.createElement("div");
+            botMessageElement.textContent = "EggspertAI: " + data;
+            chatMessages.appendChild(botMessageElement);
+          })
+          .catch(error => console.error('Error:', error));
+      }
+    }
+
+  </script>
+
+  <script>
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+    }
+
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+    }
+    document.addEventListener("DOMContentLoaded", function () {
+      const uppercaseCheckbox = document.getElementById('uppercaseCheckbox');
+
+      // Function to recursively transform text nodes to uppercase
+      function transformTextToUppercase(node) {
+        if (node.nodeType === Node.TEXT_NODE) {
+          node.textContent = node.textContent.toUpperCase();
+        } else {
+          node.childNodes.forEach(childNode => transformTextToUppercase(childNode));
+        }
+      }
+
+      // Function to handle checkbox change
+      function handleCheckboxChange() {
+        if (uppercaseCheckbox.checked) {
+          transformTextToUppercase(document.body);
+        } else {
+          location.reload(); // Refresh the page to revert changes
+        }
+      }
+
+      // Add event listener to the checkbox
+      uppercaseCheckbox.addEventListener('change', handleCheckboxChange);
+    });
+  </script>
+  <script type="module" src="js/logoutBackend.js"></script>
 </body>
+
 </html>
