@@ -1,135 +1,156 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Henlighten!</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/index.css">
-  </head>
-  <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-            <div class="container">
-                <a class="navbar-brand" href="#">henlighten</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#hero">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#features">Features</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact">Contact</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link btn btn-primary" href="login.html">Login</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
 
-    <section id="hero" class="bg-light text-center py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-start">
-                    <div class="hero-text">
-                        <h1 style="font-size: 3rem; font-weight: bold;">Welcome to Henlighten</h1>
-                        <p class="lead">Engaging lessons and activities!</p>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <img src="images/hero-section.webp" alt="Henlighten Hero Image" class="img-fluid">
-                </div>
-            </div>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Welcome to Henlighten</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="images/logo.png" alt="Logo">
+          henlighten
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#hero">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#features">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn btn-primary" href="login.html">Login</a>
+            </li>
+          </ul>
         </div>
-    </section>
+      </div>
+    </nav>
+  </header>
 
-    <section id="features" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Features</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="feature">
-                        <i class="bi bi-journal"></i>
-                        <h3>Common Core Standards</h3>
-                        <p>Aligned with Common Core educational standards for effective learning.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="feature">
-                        <i class="bi bi-lightbulb"></i>
-                        <h3>AI Powered Activities</h3>
-                        <p>Engaging AI-powered activities to enhance learning experiences.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="feature">
-                        <i class="bi bi-eye"></i>
-                        <h3>Accessibility Settings</h3>
-                        <p>Customizable accessibility settings for inclusive learning.</p>
-                    </div>
-                </div>
-            </div>
+  <section id="hero" class="bg-hero text-center py-5">
+    <div class="mt-5  container">
+      <div class="row">
+        <div class="col-md-6 text-start">
+          <div class="hero-text">
+            <h1 style="font-size: 3rem; font-weight: bold; ">Welcome to Henlighten</h1>
+            <p class="lead">Hengaging lessons and activities!</p>
+          </div>
         </div>
-    </section>
+        <div class="col-md-6">
+          <img src="images/hero-section.webp" alt="Henlighten Hero Image" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section id="about" class="bg-light text-center py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">About</h2>
-            <div class="row">
-                <div class="col-md-4">
+  <section id="features" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">Features</h2>
+      <div class="row mt-3">
+        <div class="col-md-4">
+          <div class="feature">
+            <i class="bi bi-journal"></i>
+            <h3>Common Core Standards</h3>
+            <p>Aligned with Common Core educational standards for effective learning.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature">
+            <i class="bi bi-lightbulb"></i>
+            <h3>AI Powered Activities</h3>
+            <p>Engaging AI-powered activities to enhance learning experiences.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature">
+            <i class="bi bi-eye"></i>
+            <h3>Accessibility Settings</h3>
+            <p>Customizable accessibility settings for inclusive learning.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="bg-light text-center py-5">
+    <div class="container">
+        <h2 class="text-center mb-2">About Us</h2>
+        <p class="mb-5">Henlighten aims to educate and empower anyone with the desire to learn math. We strive for inclusive and accessible features to ensure (hensure!) that everyone's learning needs are met!</p>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="about-profile">
+                    <img src="images/tabetha.jpeg" alt="Tabetha Chubb" class="img-fluid rounded-circle">
                     <h3>Tabetha Chubb</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </div>
-                <div class="col-md-4">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="col-md-4">
+                <div class="about-profile">
+                    <img src="images/patrick.jpeg" alt="Patrick Tiamson" class="img-fluid rounded-circle">
                     <h3>Patrick Tiamson</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </div>
-                <div class="col-md-4">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="col-md-4">
+                <div class="about-profile">
+                    <img src="images/rohan.jpeg" alt="Rohan Yarlagadda" class="img-fluid rounded-circle">
                     <h3>Rohan Yarlagadda</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="contact" class="bg-light text-center py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Contact</h2>
-            <form>
-                <div class="mb-3">
-                    <label for="name" class="form-label">Your Name</label>
-                    <input type="text" class="form-control" id="name" placeholder="Enter your name">
-                </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label">Your Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="Enter your email">
-                </div>
-                <div class="mb-3">
-                    <label for="message" class="form-label">Message</label>
-                    <textarea class="form-control" id="message" rows="3" placeholder="Enter your message"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
+
+  <section id="contact" class="bg-light text-center py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Contact</h2>
+      <form>
+        <div class="mb-3">
+          <label for="name" class="form-label">Your Name</label>
+          <input type="text" class="form-control" id="name" placeholder="Enter your name">
         </div>
-    </section>
-
-    <footer class="bg-dark text-light py-4">
-        <div class="container text-center">
-            <p>&copy; 2024 Henlighten. All rights reserved.</p>
+        <div class="mb-3">
+          <label for="email" class="form-label">Your Email</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter your email">
         </div>
-    </footer>
+        <div class="mb-3">
+          <label for="message" class="form-label">Message</label>
+          <textarea class="form-control" id="message" rows="3" placeholder="Enter your message"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <footer class="bg-dark text-light py-4">
+    <div class="container text-center">
+      <p>&copy; 2024 Henlighten. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>

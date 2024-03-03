@@ -10,14 +10,14 @@ body {
     background-color: #086788;
 }
 .navbar-brand img {
-   height: 4rem; 
+   height: 2rem; 
 }
 .navbar-brand img:hover {
-    height: 4rem;
+    height: 2rem;
     filter: drop-shadow(0 0 .5rem #06aed5);
  }
 .navbar {
-    font-size: 1.15rem;
+    font-size: 1rem;
     font-weight: 600;
     letter-spacing: .1rem;
     box-shadow: 0 .5rem .5rem rgba(0, 0, 0, 0.1);
@@ -40,7 +40,7 @@ body {
     margin-top: 5rem;
     display: flex;
     justify-content: center;
-    align-items: cenetr;
+    align-items: center;
     flex-wrap: wrap;
     position: relative;
 }
@@ -70,13 +70,13 @@ body {
 }
 #myProgress {
     width: 100%;
-    background-color: grey;
+    background-color: rgb(216, 216, 216);
   }
   
   #myBar {
     width: 1%;
     height: 30px;
-    background-color: green;
+    background-color: rgb(137, 206, 137);
   }
   .unit-list .container{
     margin-top: 5rem;
@@ -149,8 +149,8 @@ body {
   .form-popup {
     display: none;
     position: fixed;
-    top: 0;
-    right: 15px;
+    top: 75px;
+    right: 0px;
     border: 3px solid #f1f1f1;
     z-index: 9;
   }
@@ -198,6 +198,7 @@ body {
   .form-container .btn:hover, .open-button:hover {
     opacity: 1;
   }
+<<<<<<< HEAD
 
   .high-contrast {
     /* Define high contrast styles here */
@@ -210,3 +211,56 @@ body {
     color: black !important;
     background-color: white !important;
   }
+=======
+  
+  /* CSS for chat popup */
+.chat-popup {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    background-color: white;
+    border: 1px solid #ccc;
+    z-index: 9999;
+  }
+  
+  .chat-container {
+    padding: 10px;
+    height: 100%;
+    box-sizing: border-box;
+  }
+  
+  .chat-messages {
+    height: 200px;
+    overflow-y: scroll;
+  }
+  
+  #chatInput {
+    width: calc(100% - 70px);
+    margin-right: 5px;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #888;
+  }
+
+  .unit-box {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .unit-box select {
+    margin-bottom: 10px; /* Adjust the margin as needed */
+  }
+  
+  /* You may need to adjust the styles based on your design */
+  
+>>>>>>> f24b56d558280db82de0edd93cc4fe4f26fff8f8

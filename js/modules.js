@@ -1,8 +1,43 @@
-// Sample array
-const courses = ["counting", "shapes", "patterns", "adding", "subtracting", "place value"];
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js";
+import { getDatabase, ref, get } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-database.js";
+import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-auth.js";
 
-// Function to populate dropdown menus
-function populateDropdowns(selectedIndex) {
+const firebaseConfig = {
+    apiKey: "AIzaSyA0QSaYlQu2kOGkG7sdQm5_XbLI5B_olqg",
+    authDomain: "henhack2024.firebaseapp.com",
+    projectId: "henhack2024",
+    storageBucket: "henhack2024.appspot.com",
+    messagingSenderId: "789099395722",
+    appId: "1:789099395722:web:859d68ba1131ad72a08b73",
+    measurementId: "G-QE5DCH5NT9"
+};
+
+const app = initializeApp(firebaseConfig);
+const database = getDatabase(app);
+const auth = getAuth(app);
+
+onAuthStateChanged(auth, (user) => {
+    if (user) {
+        const userRef = ref(database, 'users/' + user.uid);
+
+        get(userRef).then((snapshot) => {
+            if (snapshot.exists()) {
+                const userData = snapshot.val();
+
+                if (userData.level !== undefined) {
+                    const level = 3//userData.level;
+                    populateDropdowns(level);
+                }
+            }
+        });
+    }
+});
+
+// Sample array
+const courses = ["Addition", "Subtraction", "Multiplication"];
+
+// Function to populate dropdown menus based on level
+function populateDropdowns(level) {
     const beforeDropdown = document.getElementById("beforeDropdown");
     const currentDropdown = document.getElementById("currentDropdown");
     const afterDropdown = document.getElementById("afterDropdown");
@@ -12,31 +47,25 @@ function populateDropdowns(selectedIndex) {
     currentDropdown.innerHTML = "<option value=''>-- Current --</option>";
     afterDropdown.innerHTML = "<option value=''>-- After --</option>";
 
-    // Populate before dropdown
-    for (let i = 0; i < selectedIndex; i++) {
+    // Populate before dropdown with completed units (before level)
+    for (let i = 0; i < level; i++) {
         const option = document.createElement("option");
         option.value = i;
         option.textContent = courses[i];
         beforeDropdown.appendChild(option);
     }
 
-    // Populate current dropdown
+    // Populate current dropdown with the current unit (level)
     const currentOption = document.createElement("option");
-    currentOption.value = selectedIndex;
-    currentOption.textContent = courses[selectedIndex];
+    currentOption.value = level;
+    currentOption.textContent = courses[level];
     currentDropdown.appendChild(currentOption);
 
-    // Populate after dropdown
-    for (let i = selectedIndex + 1; i < courses.length; i++) {
+    // Populate after dropdown with future units (after level)
+    for (let i = level + 1; i < courses.length; i++) {
         const option = document.createElement("option");
         option.value = i;
         option.textContent = courses[i];
         afterDropdown.appendChild(option);
     }
-}
-
-// Example: When an index is selected (change this according to your UI logic)
-const selectedIndex = 2; // Example selected index
-if (selectedIndex >= 0 && selectedIndex < courses.length) {
-    populateDropdowns(selectedIndex);
 }

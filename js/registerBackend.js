@@ -13,7 +13,7 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-const database = getDatabase(app)
+const database = getDatabase(app);
 const auth = getAuth(app);
 
 //const buttonID = getElementById('submitData')
@@ -46,7 +46,8 @@ submitData.addEventListener('click', (e) => {
                     username: username,
                     email: email,
                     password: password1,
-                    profileCreated: false
+                    level: 0,
+                    points: 0
                 };
 
                 // Log the user data to ensure it's correct

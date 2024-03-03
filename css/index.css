@@ -4,3 +4,43 @@ body {
     font-family: 'Varela Round', sans-serif !important;
 
 }
+
+.custom-navbar {
+    background-color: #086788;
+}
+
+.navbar-nav .nav-link {
+    color: #fff; /* White color for text */
+}
+
+
+.navbar-brand{
+    color: #fff;
+}
+
+.bg-hero{
+    background-color: #c1e6ee;
+}
+
+/* Custom CSS for the logo */
+.navbar-brand img {
+    height: 30px; /* Adjust the height as needed */
+    margin-right: 10px; /* Add some spacing between logo and text */
+}
+
+/* Custom CSS to make the logo smaller */
+@media (max-width: 768px) {
+    .navbar-brand img {
+        height: 20px; /* Reduce the height for smaller screens */
+    }
+}
+
+.about-profile {
+    margin-bottom: 20px; /* Add margin between the profile picture and the name */
+}
+
+.about-profile img {
+    width: 200px; /* Adjust the width of the profile pictures */
+    height: 200px; /* Adjust the height of the profile pictures */
+    margin-bottom: 20px; /* Add margin between the profile picture and the name */
+}
