@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  .quiz-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+  }
+  .question {
+    margin-bottom: 20px;
+  }
+  .options label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  .container {
+    display: flex;
+    align-items: center; /* Vertically align items */
+  }
+
+  .container > div {
+    margin-right: 20px; /* Add space between the elements */
+  }
+
+  img {
+    size: 25%;
+  }
+  .btn{
+    background-color: #06aed5;
+}
+  .btn:hover{
+    background-color: #f0c808;
+}
