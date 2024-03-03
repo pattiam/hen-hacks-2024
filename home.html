@@ -81,11 +81,22 @@
   <section id="progress">
     <div class="containter progressSpace">
       <h1 class="title">Progress</h1>
-      <h2 class="title">You have completed x amount of your unit</h2>
       <div id="myProgress">
         <div id="myBar"></div>
       </div>
     </div>
+    <script>
+      let totalScore = parseInt(localStorage.getItem('totalScore')) || 0;
+      // Function to update the progress bar
+      function updateProgressBar(completedPercentage) {
+        const myBar = document.getElementById('myBar');
+        myBar.style.width += completedPercentage + '%';
+      }
+
+      // Example usage:
+      // Calculate the completed percentage
+      updateProgressBar(totalScore);
+    </script>
   </section>
 
 
