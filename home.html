@@ -72,16 +72,22 @@
     <div class="container">
       <div class="unit-box">
         <h2>Completed</h2>
-        <p>Drop down of units that have been completed</p>
-      </div>
+        <select id="beforeDropdown">
+          <option value="">-- Before --</option>
+      </select>
+    </div>
       <div class="unit-box">
         <h2>Current</h2>
-        <p>Continue your current unit!</p>
+        <select id="currentDropdown">
+          <option value="">-- Current --</option>
+        </select>
         <a href="" class="btn">Go Now</a>
       </div>
       <div class="unit-box">
         <h2>Future Units</h2>
-        <p>Dropdown of upcoming units</p>
+        <select id="afterDropdown">
+          <option value="">-- After --</option>
+      </select>
       </div>
     </div>
     </section>
@@ -100,5 +106,18 @@
         </div>
       </div>
       </section>
+      <div class="container">
+        <select id="beforeDropdown">
+            <option value="">-- Before --</option>
+        </select>
+        <select id="currentDropdown">
+            <option value="">-- Current --</option>
+        </select>
+        <select id="afterDropdown">
+            <option value="">-- After --</option>
+        </select>
+    </div>
+
+    <script src="js/modules.js"></script>
 </body>
 </html>
