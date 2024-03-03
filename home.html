@@ -136,6 +136,17 @@
 
   <script type="module" src="js/modules.js"></script>
 
+<<<<<<< HEAD
+<div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Accessibility Aids</h1>
+      <ul> 
+        <li class="list-unstyled"><input type="checkbox" id="uppercaseCheckbox">
+          <label for="uppercaseCheckbox">Set everything to uppercase</label></li>
+        <li class="list-unstyled"><input type="checkbox" id="bwCheckbox">
+          <label for="bwCheckbox">Set everything to high contrast</label></li>
+      </ul>
+=======
   <div class="form-popup" id="myForm">
     <form action="/action_page.php" class="form-container">
       <h1>Accessibility Aids</h1>
@@ -144,6 +155,7 @@
       <label for="uppercaseCheckbox">Set everything to uppercase</label>
       <label for="psw"><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="psw" required>
+>>>>>>> f24b56d558280db82de0edd93cc4fe4f26fff8f8
 
       <button type="button" onclick="closeForm()">Go Back</button>
     </form>
@@ -161,6 +173,20 @@
     </div>
   </div>
 
+<<<<<<< HEAD
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+document.addEventListener("DOMContentLoaded", function() {
+  const uppercaseCheckbox = document.getElementById('uppercaseCheckbox');
+  const bwCheckbox = document.getElementById('bwCheckbox');
+  // Function to recursively transform text nodes to uppercase
+  function transformTextToUppercase(node) {
+    if (node.nodeType === Node.TEXT_NODE) {
+      node.textContent = node.textContent.toUpperCase();
+    } else {
+      node.childNodes.forEach(childNode => transformTextToUppercase(childNode));
+=======
 
   <footer class="bg-dark text-light py-4">
     <div class="container text-center">
@@ -171,12 +197,36 @@
   <script>
     function openChat() {
       document.getElementById("chatPopup").style.display = "block";
+>>>>>>> f24b56d558280db82de0edd93cc4fe4f26fff8f8
     }
 
+<<<<<<< HEAD
+  // Function to handle checkbox change
+  function handleCheckboxChangeUC() {
+    if (uppercaseCheckbox.checked) {
+      transformTextToUppercase(document.body);
+    } else {
+      location.reload(); // Refresh the page to revert changes
+=======
     function closeChat() {
       document.getElementById("chatPopup").style.display = "none";
+>>>>>>> f24b56d558280db82de0edd93cc4fe4f26fff8f8
     }
 
+<<<<<<< HEAD
+  function handleCheckboxChangeBW() {
+      if (bwCheckbox.checked) {
+        document.body.classList.add('high-contrast'); // Add a class to the body
+      } else {
+        document.body.classList.remove('high-contrast'); // Remove the class from the body
+      }
+    }
+
+  // Add event listener to the checkbox
+  uppercaseCheckbox.addEventListener('change', handleCheckboxChangeUC);
+  bwCheckbox.addEventListener('change', handleCheckboxChangeBW);
+});
+=======
     function sendMessage() {
       var messageInput = document.getElementById("chatInput");
       var message = messageInput.value.trim();
@@ -186,6 +236,7 @@
         messageElement.textContent = "You: " + message;
         chatMessages.appendChild(messageElement);
         messageInput.value = "";
+>>>>>>> f24b56d558280db82de0edd93cc4fe4f26fff8f8
 
         // Send message to Flask endpoint along with user's message
         fetch('http://127.0.0.1:5000/send_message', {

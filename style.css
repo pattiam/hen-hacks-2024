@@ -198,6 +198,20 @@ body {
   .form-container .btn:hover, .open-button:hover {
     opacity: 1;
   }
+<<<<<<< HEAD
+
+  .high-contrast {
+    /* Define high contrast styles here */
+    color: black !important; /* Set text color to black */
+    background-color: white !important; /* Set background color to white */
+  }
+  
+  .high-contrast * {
+    /* Set all elements inside body to black and white */
+    color: black !important;
+    background-color: white !important;
+  }
+=======
   
   /* CSS for chat popup */
 .chat-popup {
@@ -249,3 +263,4 @@ body {
   
   /* You may need to adjust the styles based on your design */
   
+>>>>>>> f24b56d558280db82de0edd93cc4fe4f26fff8f8
