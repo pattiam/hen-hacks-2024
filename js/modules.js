@@ -25,7 +25,7 @@ onAuthStateChanged(auth, (user) => {
                 const userData = snapshot.val();
 
                 if (userData.level !== undefined) {
-                    const level = 1//userData.level;
+                    const level = 3//userData.level;
                     populateDropdowns(level);
                 }
             }

@@ -1,7 +1,7 @@
 // Function to generate random subtraction questions
 let questionAnswers = [];
 
-function generateSubtractionQuestion() {
+function generateQuestion() {
   const num1 = Math.floor(Math.random() * 20); // Generate a random number between 0 and 20
   const num2 = Math.floor(Math.random() * 20); // Generate a random number between 0 and 20
   const answer = num1 - num2;
@@ -14,7 +14,7 @@ function generateQuiz() {
   const quizContainer = document.getElementById("quiz-container");
 
   for (let i = 1; i <= 10; i++) {
-    const questionObj = generateSubtractionQuestion();
+    const questionObj = generateQuestion();
     const questionDiv = document.createElement("div");
     questionDiv.innerHTML = `<p class="mb-1">Question ${i}: ${questionObj.question} = </p><input type="text" id="answer${i}" class="form-control"><br>`;
     quizContainer.appendChild(questionDiv);
