@@ -165,7 +165,7 @@
     document.getElementById("chatPopup").style.display = "none";
   }
 
-function sendMessage() {
+  function sendMessage() {
   var messageInput = document.getElementById("chatInput");
   var message = messageInput.value.trim();
   if (message !== "") {
@@ -175,8 +175,14 @@ function sendMessage() {
     chatMessages.appendChild(messageElement);
     messageInput.value = "";
     
-    // Send message to Flask endpoint
-    fetch('/send_message')
+    // Send message to Flask endpoint along with user's message
+    fetch('http://127.0.0.1:5000/send_message', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ message: message }),
+    })
       .then(response => response.text())
       .then(data => {
         // Display response from server (chatbot.py) in chat interface
