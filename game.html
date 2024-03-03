@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Henlighten - Game 1</title>
+  <link href="css/game.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="home.html">
+        <img src="images/logo.png" alt="Henlighten Logo" width="30" height="30" class="d-inline-block align-top">
+        henlighten
+      </a>
+      <h1 class="navbar-text text-light">Game 1</h1>
+    </div>
+  </nav>
+
+  <section id="game" class="container mt-4">
+    <h2>Click to Add Apples</h2>
+    <div class="game-container">
+      <div class="basket" id="basket">
+        <p>Basket</p>
+        <p id="apple-count">0 apples</p>
+        <input type="number" id="eat-apples-input" placeholder="# apples">
+        <button id="eat-apples-btn" class="btn btn-primary" onclick="eatApples()">Eat Apples</button>
+    </div>
+      <div class="apple-menu" id="apple-menu">
+        <!-- Apple buttons will be added dynamically here -->
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>

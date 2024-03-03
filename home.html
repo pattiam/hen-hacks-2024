@@ -81,11 +81,22 @@
   <section id="progress">
     <div class="containter progressSpace">
       <h1 class="title">Progress</h1>
-      <h2 class="title">You have completed x amount of your unit</h2>
       <div id="myProgress">
         <div id="myBar"></div>
       </div>
     </div>
+    <script>
+      let totalScore = parseInt(localStorage.getItem('totalScore')) || 0;
+      // Function to update the progress bar
+      function updateProgressBar(completedPercentage) {
+        const myBar = document.getElementById('myBar');
+        myBar.style.width += completedPercentage + '%';
+      }
+
+      // Example usage:
+      // Calculate the completed percentage
+      updateProgressBar(totalScore);
+    </script>
   </section>
 
 
@@ -121,17 +132,11 @@
   <section id="game-list" class="game-list">
     <div class="container">
       <h1 class="title">Games</h1>
-      <p class="title">Earn points towards your unit</p>
+      <p class="title">Henjoy some fun math games!</p>
       <div class="game-box">
         <h2>Game 1</h2>
+        <a href="game.html" class="btn btn-primary">Play Game 1</a>
       </div>
-      <div class="game-box">
-        <h2>Game 2</h2>
-      </div>
-      <div class="game-box">
-        <h2>Game 3</h2>
-      </div>
-    </div>
   </section>
 
   <script type="module" src="js/modules.js"></script>
@@ -255,6 +260,7 @@
 
   </script>
   <script type="module" src="js/logoutBackend.js"></script>
+  <script type="module" src="js/Redirect.js"></script>
 </body>
 
 </html>

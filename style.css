@@ -261,3 +261,28 @@ body {
   
   /* You may need to adjust the styles based on your design */
   
+/* Ensure the progress bar is black in high contrast mode */
+.high-contrast #myBar {
+  background-color: black !important;
+}
+
+/* Ensure the progress bar has a black outline in high contrast mode */
+.high-contrast #myProgress {
+  border: 1px solid black !important;
+}
+
+/* Ensure the progress bar text is visible in high contrast mode */
+.high-contrast #myProgress {
+  color: black !important;
+}
+/* Ensure buttons have black background and white text in high contrast mode */
+.high-contrast .btn {
+  background-color: black !important;
+  color: white !important;
+}
+
+/* Ensure button hover effects are maintained in high contrast mode */
+.high-contrast .btn:hover {
+  opacity: 0.8;
+  /* You can adjust hover styles as needed */
+}
