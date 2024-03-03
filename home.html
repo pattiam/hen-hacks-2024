@@ -112,11 +112,12 @@
 <div class="form-popup" id="myForm">
   <form action="/action_page.php" class="form-container">
     <h1>Accessibility Aids</h1>
-
-    <input type="checkbox" id="uppercaseCheckbox">
-    <label for="uppercaseCheckbox">Set everything to uppercase</label>
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+      <ul> 
+        <li class="list-unstyled"><input type="checkbox" id="uppercaseCheckbox">
+          <label for="uppercaseCheckbox">Set everything to uppercase</label></li>
+        <li class="list-unstyled"><input type="checkbox" id="bwCheckbox">
+          <label for="bwCheckbox">Set everything to high contrast</label></li>
+      </ul>
 
     <button type="button" onclick="closeForm()">Go Back</button>
   </form>
@@ -132,7 +133,7 @@ function closeForm() {
 }
 document.addEventListener("DOMContentLoaded", function() {
   const uppercaseCheckbox = document.getElementById('uppercaseCheckbox');
-
+  const bwCheckbox = document.getElementById('bwCheckbox');
   // Function to recursively transform text nodes to uppercase
   function transformTextToUppercase(node) {
     if (node.nodeType === Node.TEXT_NODE) {
@@ -143,7 +144,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   // Function to handle checkbox change
-  function handleCheckboxChange() {
+  function handleCheckboxChangeUC() {
     if (uppercaseCheckbox.checked) {
       transformTextToUppercase(document.body);
     } else {
@@ -151,8 +152,17 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   }
 
+  function handleCheckboxChangeBW() {
+      if (bwCheckbox.checked) {
+        document.body.classList.add('high-contrast'); // Add a class to the body
+      } else {
+        document.body.classList.remove('high-contrast'); // Remove the class from the body
+      }
+    }
+
   // Add event listener to the checkbox
-  uppercaseCheckbox.addEventListener('change', handleCheckboxChange);
+  uppercaseCheckbox.addEventListener('change', handleCheckboxChangeUC);
+  bwCheckbox.addEventListener('change', handleCheckboxChangeBW);
 });
 
 </script>

@@ -198,4 +198,15 @@ body {
   .form-container .btn:hover, .open-button:hover {
     opacity: 1;
   }
+
+  .high-contrast {
+    /* Define high contrast styles here */
+    color: black !important; /* Set text color to black */
+    background-color: white !important; /* Set background color to white */
+  }
   
+  .high-contrast * {
+    /* Set all elements inside body to black and white */
+    color: black !important;
+    background-color: white !important;
+  }
