@@ -111,39 +111,41 @@
         <h2>Future Units</h2>
         <select id="afterDropdown">
           <option value="">-- After --</option>
-      </select>
+        </select>
       </div>
     </div>
   </section>
   <script src="js/QuizPick.js"></script>
 
 
-    <section id="game-list" class="game-list">
-      <div class="container">
-        <h1 class ="title">Games</h1>
-        <p class="title">Earn points towards your unit</p>
-        <div class="game-box">
-          <h2>Game 1</h2>
-        </div>
-        <div class="game-box">
-          <h2>Game 2</h2>
-        </div>
-        <div class="game-box">
-          <h2>Game 3</h2>
-        </div>
+  <section id="game-list" class="game-list">
+    <div class="container">
+      <h1 class="title">Games</h1>
+      <p class="title">Earn points towards your unit</p>
+      <div class="game-box">
+        <h2>Game 1</h2>
       </div>
-      </section>
+      <div class="game-box">
+        <h2>Game 2</h2>
+      </div>
+      <div class="game-box">
+        <h2>Game 3</h2>
+      </div>
+    </div>
+  </section>
 
   <script type="module" src="js/modules.js"></script>
 
-<div class="form-popup" id="myForm">
-  <form action="/action_page.php" class="form-container">
-    <h1>Accessibility Aids</h1>
-      <ul> 
+  <div class="form-popup" id="myForm">
+    <form action="/action_page.php" class="form-container">
+      <h1>Accessibility Aids</h1>
+      <ul>
         <li class="list-unstyled"><input type="checkbox" id="uppercaseCheckbox">
-          <label for="uppercaseCheckbox">Set everything to uppercase</label></li>
+          <label for="uppercaseCheckbox">Set everything to uppercase</label>
+        </li>
         <li class="list-unstyled"><input type="checkbox" id="bwCheckbox">
-          <label for="bwCheckbox">Set everything to high contrast</label></li>
+          <label for="bwCheckbox">Set everything to high contrast</label>
+        </li>
       </ul>
 
       <button type="button" onclick="closeForm()">Go Back</button>
@@ -230,7 +232,7 @@
       }
 
       // Function to handle checkbox change
-      function handleCheckboxChange() {
+      function handleCheckboxChangeUC() {
         if (uppercaseCheckbox.checked) {
           transformTextToUppercase(document.body);
         } else {
@@ -238,9 +240,19 @@
         }
       }
 
+      function handleCheckboxChangeBW() {
+        if (bwCheckbox.checked) {
+          document.body.classList.add('high-contrast'); // Add a class to the body
+        } else {
+          document.body.classList.remove('high-contrast'); // Remove the class from the body
+        }
+      }
+
       // Add event listener to the checkbox
-      uppercaseCheckbox.addEventListener('change', handleCheckboxChange);
+      uppercaseCheckbox.addEventListener('change', handleCheckboxChangeUC);
+      bwCheckbox.addEventListener('change', handleCheckboxChangeBW);
     });
+
   </script>
   <script type="module" src="js/logoutBackend.js"></script>
 </body>
