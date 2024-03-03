@@ -1,0 +1,17 @@
+/* Add custom CSS to adjust the width of the input boxes */
+@import url("http://fonts.googleapis.com/css?family=Varela Round:400,300,700");
+
+body {
+    font-family: 'Varela Round', sans-serif !important;
+
+}
+
+input[type="text"] {
+    max-width: 200px;
+    /* Adjust the max-width as needed */
+}
+
+.custom-navbar {
+    background-color: #086788;
+}
+
