@@ -6,10 +6,26 @@ function generateQuestion() {
   const num2 = Math.floor(Math.random() * 20); // Generate a random number between 0 and 20
   const answer = num1 - num2;
   questionAnswers.push(answer);
-  return { question: `${num1} - ${num2}`, answer: answer };
+  return { question: `${num1} minus ${num2}`, answer: answer };
 }
 
 // Function to generate the quiz
+function speakText(text) {
+  const speechSynthesis = window.speechSynthesis;
+  const speechUtterance = new SpeechSynthesisUtterance();
+  speechUtterance.text = text;
+  speechSynthesis.speak(speechUtterance);
+}
+
+// Function to generate the quiz
+function speakText(text) {
+  const speechSynthesis = window.speechSynthesis;
+  const speechUtterance = new SpeechSynthesisUtterance();
+  speechUtterance.text = text;
+  speechSynthesis.speak(speechUtterance);
+}
+
+// Modify the generateQuiz function to read questions aloud
 function generateQuiz() {
   const quizContainer = document.getElementById("quiz-container");
 
@@ -18,6 +34,12 @@ function generateQuiz() {
     const questionDiv = document.createElement("div");
     questionDiv.innerHTML = `<p class="mb-1">Question ${i}: ${questionObj.question} = </p><input type="text" id="answer${i}" class="form-control"><br>`;
     quizContainer.appendChild(questionDiv);
+
+    // Add event listener to read question aloud when input is focused
+    const inputField = document.getElementById(`answer${i}`);
+    inputField.addEventListener('focus', function() {
+      speakText(`Question ${i}. ${questionObj.question}`);
+    });
   }
 
   const submitButton = document.createElement("button");
@@ -45,6 +67,11 @@ function generateQuiz() {
   });
   
   quizContainer.appendChild(submitButton);
+
+  window.onload = function() {
+    speakText("Press Tab to Start");
+  };
+  
 }
 
 generateQuiz();

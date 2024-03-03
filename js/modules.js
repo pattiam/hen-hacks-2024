@@ -34,7 +34,7 @@ onAuthStateChanged(auth, (user) => {
 });
 
 // Sample array
-const courses = ["Addition", "Subtraction", "Multiplication"];
+const courses = ["Addition", "Subtraction", "Multiplication", "Division"];
 
 // Function to populate dropdown menus based on level
 function populateDropdowns(level) {
