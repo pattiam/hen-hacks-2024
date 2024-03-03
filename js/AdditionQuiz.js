@@ -10,6 +10,21 @@ function generateQuestion() {
     questionAnswers.push(answer);
     return { question: `${num1} + ${num2}`, answer: answer };
 }
+// Function to generate the quiz
+function speakText(text) {
+  const speechSynthesis = window.speechSynthesis;
+  const speechUtterance = new SpeechSynthesisUtterance();
+  speechUtterance.text = text;
+  speechSynthesis.speak(speechUtterance);
+}
+
+// Function to generate the quiz
+function speakText(text) {
+  const speechSynthesis = window.speechSynthesis;
+  const speechUtterance = new SpeechSynthesisUtterance();
+  speechUtterance.text = text;
+  speechSynthesis.speak(speechUtterance);
+}
 
 // Function to generate the quiz
 function generateQuiz() {
@@ -20,6 +35,12 @@ function generateQuiz() {
         const questionDiv = document.createElement("div");
         questionDiv.innerHTML = `<p class="mb-1">Question ${i}: ${questionObj.question} = </p><input type="text" id="answer${i}" class="form-control"><br>`;
         quizContainer.appendChild(questionDiv);
+
+            // Add event listener to read question aloud when input is focused
+    const inputField = document.getElementById(`answer${i}`);
+    inputField.addEventListener('focus', function() {
+      speakText(`Question ${i}. ${questionObj.question}`);
+    });
     }
 
     const submitButton = document.createElement("button");
@@ -54,6 +75,9 @@ function generateQuiz() {
     });
 
     quizContainer.appendChild(submitButton);
+    window.onload = function() {
+      speakText("Press Tab to Start");
+    };
 }
 
 generateQuiz();

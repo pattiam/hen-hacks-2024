@@ -1,6 +1,17 @@
+/* game.css */
+
+/* Import Google Font */
+@import url("http://fonts.googleapis.com/css?family=Varela Round:400,300,700");
+
+/* Apply Font to Body */
 body {
-    font-family: Arial, sans-serif;
-  }
+    font-family: 'Varela Round', sans-serif !important;
+}
+
+/* Navbar */
+.custom-navbar {
+    background-color: #086788;
+}
   .quiz-container {
     max-width: 600px;
     margin: 0 auto;
