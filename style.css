@@ -1,10 +1,125 @@
-.navbar-brand {
-   height: 3rem; 
+.custom-navbar {
+    background-color: #086788;
 }
+.navbar-brand img {
+   height: 4rem; 
+}
+.navbar-brand img:hover {
+    height: 4rem;
+    filter: drop-shadow(0 0 .5rem #06aed5);
+ }
 .navbar {
-    font-size: 1rem;
+    font-size: 1.15rem;
     font-weight: 600;
+    letter-spacing: .1rem;
+    box-shadow: 0 .5rem .5rem rgba(0, 0, 0, 0.1);
+    z-index: 1;
 }
 .nav-item {
     padding: .5rem;
+}
+
+.nav-link {
+    color: #fff1d0!important;
+}
+
+.nav-link.active, 
+.nav-link:hover{
+    color: #06aed5!important;
+}
+
+.flight-list .container{
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: cenetr;
+    flex-wrap: wrap;
+    position: relative;
+}
+.container .flight-box{
+    min-width: 200px;
+    max-width: 250px;
+    height: 230px;
+    padding: 2rem 1.5rem 2rem;
+    text-align: center;
+    background-color: #086788;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    color: #fff1d0;
+    margin: 2rem 0.5rem;
+}
+.container .flight-box .btn{
+    background-color: #06aed5;
+}
+.container .flight-box .btn:hover{
+    background-color: #f0c808;
+}
+
+.progressSpace {
+    width: 100%;
+    padding: 20px;
+}
+#myProgress {
+    width: 100%;
+    background-color: grey;
+  }
+  
+  #myBar {
+    width: 1%;
+    height: 30px;
+    background-color: green;
+  }
+  .unit-list .container{
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: horizontal;
+    flex-wrap: wrap;
+    position: relative;
+}
+.container .unit-box .btn{
+    background-color: #06aed5;
+}
+.container .unit-box .btn:hover{
+    background-color: #f0c808;
+}
+
+.container .unit-box{
+    min-width: 200px;
+    width:20%;
+    height: 230px;
+    padding: 2rem 1.5rem 2rem;
+    text-align: center;
+    background-color: #086788;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    color: #fff1d0;
+    margin: 2rem 0.5rem;
+}
+
+.container .game-box .btn{
+    background-color: #06aed5;
+}
+.container .game-box .btn:hover{
+    background-color: #f0c808;
+}
+
+.container .game-box{
+    width: 100%;
+    padding: 20px;
+    height: 100px;
+    text-align: center;
+    background-color: #086788;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    color: #fff1d0;
+    margin: 10px;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 10px;
 }
