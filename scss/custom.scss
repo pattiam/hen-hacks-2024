@@ -5,8 +5,13 @@ $primary: #086bbe; // New primary color
 $secondary: #6c757d; // New secondary color
 // You can override more variables here
 
+@import "../node_modules/bootstrap/scss/_functions.scss";
+@import "../node_modules/bootstrap/scss/_variables.scss";
 // Merge custom colors into Bootstrap's theme colors
-//$theme-colors: map-merge($theme-colors, $custom-colors);
+$custom-colors:(
+    "test-color": #000
+);
+$theme-colors: map-merge($theme-colors, $custom-colors);
 
 // Import Bootstrap's source SCSS
 @import "../node_modules/bootstrap/scss/bootstrap.scss";

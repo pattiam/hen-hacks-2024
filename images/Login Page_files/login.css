@@ -1,0 +1,48 @@
+@import url("http://fonts.googleapis.com/css?family=Varela Round:400,300,700");
+
+
+body {
+    font-family: 'Varela Round', sans-serif !important;
+    background-image: url('/images/background.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+
+}
+.login-box {
+    background: rgba(255, 255, 255, 0.805);
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.welcome-text {
+    font-size: 24px; /* Adjust the font size as needed */
+    margin-bottom: 20px; /* Adds space below the text */
+    font-weight:400;
+    text-align: center; /* Center the text */
+
+}
+.logo{
+    width: 120px;
+    height: auto;
+    display: block; 
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+.sign-in{
+    width: 200px;
+    display: block;
+    margin: 0 auto
+}
+
+.register-link{
+    font-size: 0.8rem;
+}
+.forgot-password{
+    font-size: 0.8rem;
+}
+.form-check-label{
+    margin-bottom: 0; /* Set the margin to 0 */
+}

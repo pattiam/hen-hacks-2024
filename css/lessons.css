@@ -1,0 +1,23 @@
+/* Add your custom CSS styles here */
+@import url("http://fonts.googleapis.com/css?family=Varela Round:400,300,700");
+
+body {
+    font-family: 'Varela Round', sans-serif !important;
+
+}
+
+
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #f8f9fa;
+    padding-top: 20px;
+  }
+  
+  #content {
+    margin-left: 250px; /* Adjust according to the width of the sidebar */
+  }
+  
