@@ -237,6 +237,15 @@ body {
     font-size: 16px;
     color: #888;
   }
+
+  .unit-box {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .unit-box select {
+    margin-bottom: 10px; /* Adjust the margin as needed */
+  }
   
   /* You may need to adjust the styles based on your design */
   
