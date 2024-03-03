@@ -199,3 +199,44 @@ body {
     opacity: 1;
   }
   
+  /* CSS for chat popup */
+.chat-popup {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    background-color: white;
+    border: 1px solid #ccc;
+    z-index: 9999;
+  }
+  
+  .chat-container {
+    padding: 10px;
+    height: 100%;
+    box-sizing: border-box;
+  }
+  
+  .chat-messages {
+    height: 200px;
+    overflow-y: scroll;
+  }
+  
+  #chatInput {
+    width: calc(100% - 70px);
+    margin-right: 5px;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #888;
+  }
+  
+  /* You may need to adjust the styles based on your design */
+  

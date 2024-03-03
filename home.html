@@ -28,7 +28,7 @@
               <a class="nav-link" href="#" onclick="openForm()">Settings</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Help</a>
+              <a class="nav-link" href="#" onclick="openChat()">Help</a>
             </li>
             <li class="nav-item">
               <a class="nav-link btn btn-primary" href="#" id="logout">Log Out</a>
@@ -54,17 +54,17 @@
     <div class="flight-box">
       <h2>Progress</h2>
       <p>Look at your progress here! You've earned this many points</p>
-      <a href="" class="btn">Go Now</a>
+      <a href="#progress" class="btn">Go Now</a>
     </div>
     <div class="flight-box">
       <h2>Units</h2>
       <p>Continue your current unit!</p>
-      <a href="" class="btn">Go Now</a>
+      <a href="#unit-list" class="btn">Go Now</a>
     </div>
     <div class="flight-box">
       <h2>Games</h2>
       <p>Play some games to earn points to get to the next unit!</p>
-      <a href="" class="btn">Go Now</a>
+      <a href="#game-list" class="btn">Go Now</a>
     </div>
     <div class="flight-box">
       <h2>Competition</h2>
@@ -73,7 +73,7 @@
     </div>
   </div>
   </section>
-  <section>
+  <section id = "progress">
     <div class="containter progressSpace">
       <h1 class ="title">Progress</h1>
       <h2 class="title">You have completed x amount of your unit</h2>
@@ -121,7 +121,7 @@
       </div>
       </section>
 
-    <script src="js/modules.js"></script>
+    <script type="module" src="js/modules.js"></script>
 
 <div class="form-popup" id="myForm">
   <form action="/action_page.php" class="form-container">
@@ -136,11 +136,58 @@
   </form>
 </div>
 
+<!-- Chatbot Interface -->
+<div class="chat-popup" id="chatPopup">
+  <div class="chat-container">
+    <button class="close-btn" onclick="closeChat()">Close</button>
+    <div class="chat-messages" id="chatMessages">
+      <!-- Chat messages will be displayed here -->
+    </div>
+    <input type="text" id="chatInput" placeholder="Type your message...">
+    <button onclick="sendMessage()">Send</button>
+  </div>
+</div>
+
+
 <footer class="bg-dark text-light py-4">
   <div class="container text-center">
     <p>&copy; 2024 Henlighten. All rights reserved.</p>
   </div>
 </footer>
+
+<script>
+  function openChat() {
+    document.getElementById("chatPopup").style.display = "block";
+  }
+
+  function closeChat() {
+    document.getElementById("chatPopup").style.display = "none";
+  }
+
+function sendMessage() {
+  var messageInput = document.getElementById("chatInput");
+  var message = messageInput.value.trim();
+  if (message !== "") {
+    var chatMessages = document.getElementById("chatMessages");
+    var messageElement = document.createElement("div");
+    messageElement.textContent = "You: " + message;
+    chatMessages.appendChild(messageElement);
+    messageInput.value = "";
+    
+    // Send message to Flask endpoint
+    fetch('/send_message')
+      .then(response => response.text())
+      .then(data => {
+        // Display response from server (chatbot.py) in chat interface
+        var botMessageElement = document.createElement("div");
+        botMessageElement.textContent = "EggspertAI: " + data;
+        chatMessages.appendChild(botMessageElement);
+      })
+      .catch(error => console.error('Error:', error));
+  }
+}
+
+</script>
 
 <script>
 function openForm() {
