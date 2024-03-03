@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multiple Choice Quiz</title>
+  <link rel="stylesheet" href="css/game2.css">
+</head>
+<body>
+
+<div class="quiz-container">
+  <h2>Defeat Mr.Henemy</h2>
+  <p>You must get 4 out of 5 correct to win!</p>
+  <div class="question" id="question"></div>
+  <div class="options" id="options"></div>
+  <button onclick="checkAnswer()">Submit</button>
+  <p id="result"></p>
+  <a href="home.html"><button class="btn">Exit</button></a>
+</div>
+<div class="container">
+  <div>
+    <img src="images/stickman.jpg">
+  </div>
+  <div id="mrHenemyDiv">
+    <h1 class="mr.henemy"></h1>
+  </div>
+</div>
+
+<script>
+  const quizData = [
+    {
+      question: "5-3",
+      options: ["2", "3", "4", "1"],
+      answer: "2"
+    },
+    {
+      question: "20-4",
+      options: ["6", "11", "15", "16"],
+      answer: "16"
+    },
+    {
+      question: "44-23",
+      options: ["27", "67", "21", "17"],
+      answer: "21"
+    },
+    {
+      question: "120-110",
+      options: ["130", "230", "10", "20"],
+      answer: "10"
+    },
+    {
+      question: "2000-1987",
+      options: ["1", "17", "30", "13"],
+      answer: "13"
+    }
+  ];
+  const henemyState = "   /\\ /\\ \n  ((ovo))\n  ():::()\n    VVV";
+
+  let currentQuestion = 0;
+  const questionElement = document.getElementById("question");
+  const optionsElement = document.getElementById("options");
+  const resultElement = document.getElementById("result");
+  const mrHenemyDiv = document.getElementById("mrHenemyDiv");
+  let score = 0;
+
+  function loadQuestion() {
+    const currentQuizData = quizData[currentQuestion];
+    questionElement.textContent = currentQuizData.question;
+    optionsElement.innerHTML = '';
+    currentQuizData.options.forEach(option => {
+      const optionElement = document.createElement("label");
+      optionElement.innerHTML = `<input type="radio" name="option" value="${option}"> ${option}`;
+      optionsElement.appendChild(optionElement);
+    });
+  }
+
+  function checkAnswer() {
+    const selectedOption = document.querySelector('input[name="option"]:checked');
+    if (selectedOption) {
+      if (selectedOption.value === quizData[currentQuestion].answer) {
+        resultElement.textContent = "Correct!";
+        score++;
+      } else {
+        resultElement.textContent = `Incorrect. The correct answer is ${quizData[currentQuestion].answer}.`;
+      }
+      currentQuestion++;
+      if (currentQuestion < quizData.length) {
+        loadQuestion();
+      } else {
+        if(score < 4){
+        resultElement.textContent = `Try Again! You scored ${score}/${quizData.length}`;
+        } else {
+          resultElement.textContent = `You Win!! You scored ${score}/${quizData.length}`;  
+        }
+        document.querySelector('button').disabled = true;
+      }
+    } else {
+      alert("Please select an option.");
+    }
+    let henemyState = "";
+    if (score < 4) {
+      henemyState = "   /\\ /\\ \n  ((ovo))\n  ():::()\n    VVV";
+    } else {
+      henemyState = "  /\\_/\\ \n ((@v@))\n ():::()\n  VV-VV";
+    }
+    mrHenemyDiv.innerHTML = `<h1 class="mr.henemy"><pre>${henemyState}</pre></h1>`;
+    
+  }
+
+  loadQuestion();
+</script>
+
+</body>
+</html>
